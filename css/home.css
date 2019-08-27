@@ -89,7 +89,9 @@ ul.res {
 .menuTriger {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 5px;
   background-color: rgba(22, 58, 58, 0.6);
   position: fixed;
   top: 25px;
@@ -113,7 +115,9 @@ ul.res {
       display: flex; } }
   .menuTriger i {
     color: #ffffff;
-    font-size: 20px; }
+    font-size: 20px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
 
 .navover {
   position: fixed;
@@ -182,7 +186,6 @@ ul.res {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%;
     width: 100%;
     padding: 0px 25px 0; }
     .sideNav > ul > li {
@@ -386,7 +389,7 @@ ul.res {
         .head .search input {
           width: 600px;
           background-color: rgba(0, 0, 0, 0);
-          border-bottom: 1px solid #3d3d3d; }
+          border-bottom: 1px solid #5f5f5f; }
           .head .search input:focus {
             border-bottom: 1px solid #888; } }
       @media (max-width: 767px) {
@@ -439,7 +442,7 @@ ul.res {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(22, 58, 58, 0.95);
     z-index: 9;
     display: none;
     -webkit-box-align: center;
@@ -645,12 +648,12 @@ ul.res {
   .owl-dots button:not(:last-child) {
     margin-left: 5px; }
   .owl-dots button.active span {
-    background-color: #ffc044; }
+    background-color: rgba(22, 58, 58, 0.6); }
   .owl-dots button span {
     display: block;
     width: 10px;
     height: 10px;
-    background-color: rgba(255, 192, 68, 0.3); }
+    background-color: rgba(22, 58, 58, 0.3); }
 
 .main-slider .owl-nav {
   position: absolute;
@@ -729,9 +732,7 @@ ul.res {
   display: none; }
   @media (max-width: 991px) {
     .main-slider .owl-dots {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
+      display: none; } }
   @media (max-width: 600px) {
     .main-slider .owl-dots {
       bottom: 10px; } }
@@ -751,7 +752,7 @@ ul.res {
   z-index: 1; }
   .sliders:after {
     content: "";
-    width: 95.5%;
+    width: calc(100% - 60px);
     height: 100%;
     border: 1px solid #163a3a;
     display: block;
@@ -762,6 +763,9 @@ ul.res {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     z-index: 1; }
+    @media (max-width: 600px) {
+      .sliders:after {
+        width: calc(100% - 30px); } }
 
 .disc.custom {
   position: relative;
@@ -976,7 +980,7 @@ ul.res {
   .product .pro-title {
     font-size: 14px;
     font-family: "frtBold";
-    color: #000;
+    color: #163a3a;
     -webkit-transition: .5s;
     transition: .5s; }
     .product .pro-title:hover {
@@ -989,7 +993,7 @@ ul.res {
       color: #163a3a;
       margin-right: 8px; }
     .product span.discount {
-      color: #bbbbbb;
+      color: #9f9f9f;
       text-decoration: line-through; }
 
 .boxes {
@@ -1023,7 +1027,7 @@ ul.res {
       transition: .5s; }
     .boxes .box p {
       font-size: 16px;
-      color: #000000; }
+      color: #163a3a; }
     @media (max-width: 991px) {
       .boxes .box {
         padding: 0 25px; } }
@@ -1099,7 +1103,7 @@ footer {
   footer .foot-links a {
     font-size: 14px;
     font-family: "frt";
-    color: #7f7f7f;
+    color: #a7b8b8;
     -webkit-transition: .5s;
     transition: .5s; }
     footer .foot-links a:hover {
@@ -1148,21 +1152,21 @@ footer {
       width: 100%;
       border: 0;
       border-bottom: 1px solid #4c7c7c;
-      color: #4f4f4f;
+      color: #4c7c7c;
       font-size: 14px;
       background-color: transparent;
       -webkit-transition: .5s;
       transition: .5s; }
       footer .frm input::-webkit-input-placeholder {
-        color: #4f4f4f; }
+        color: #4c7c7c; }
       footer .frm input::-moz-placeholder {
-        color: #4f4f4f; }
+        color: #4c7c7c; }
       footer .frm input:-ms-input-placeholder {
-        color: #4f4f4f; }
+        color: #4c7c7c; }
       footer .frm input::-ms-input-placeholder {
-        color: #4f4f4f; }
+        color: #4c7c7c; }
       footer .frm input::placeholder {
-        color: #4f4f4f; }
+        color: #4c7c7c; }
       footer .frm input:focus {
         border-bottom: 1px solid #fff; }
     footer .frm button {
@@ -1209,23 +1213,23 @@ footer {
     @media (max-width: 600px) {
       .end .content {
         -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        padding: 10px 0 0; } }
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        padding: 0 0 10px; } }
     @media (max-width: 767px) {
       .end .content {
         text-align: center; } }
     .end .content p, .end .content a {
       font-size: 14px;
-      color: #616161;
+      color: #4c7c7c;
       margin-bottom: 0; }
       @media (max-width: 767px) {
         .end .content p, .end .content a {
           font-size: 13px; } }
       @media (max-width: 600px) {
         .end .content p, .end .content a {
-          margin-bottom: 10px; } }
+          margin-top: 10px; } }
     @media (max-width: 480px) {
       .end .content p {
         display: -webkit-box;
@@ -1244,6 +1248,9 @@ footer {
         margin-bottom: 0; } }
     .end .content a img {
       margin-right: 5px; }
+      @media (max-width: 600px) {
+        .end .content a img {
+          margin-right: 0; } }
     @media (max-width: 480px) {
       .end .content a {
         margin-top: 10px; } }
