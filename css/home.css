@@ -774,7 +774,7 @@ ul.res {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     z-index: 1; }
-    @media (max-width: 600px) {
+    @media (max-width: 991px) {
       .sliders:after {
         width: calc(100% - 30px); } }
 
@@ -806,7 +806,7 @@ ul.res {
       font-family: "frtBold";
       color: #163a3a;
       margin-bottom: 0;
-      margin-right: 25px; }
+      margin-right: 5px; }
       @media (max-width: 991px) {
         .disc.custom .disc-head > p {
           margin-right: 0; } }
@@ -819,7 +819,8 @@ ul.res {
       -webkit-transition: .5s;
       transition: .5s;
       font-size: 14px;
-      color: #cfcfcf; }
+      color: #cfcfcf;
+      margin-left: 5px; }
       @media (min-width: 992px) {
         .disc.custom .disc-head > a {
           margin-left: 20px; } }

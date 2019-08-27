@@ -56,13 +56,15 @@ $(function() {
 
   // clients Slider
   $('.disc .owl-carousel').owlCarousel({
-    autoplay: false,
-    rtl: true,
     loop: true,
-    nav: true,
-    items: 5,
-    // margin: 30,
-    dots: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    margin: 15,
+    rtl: true,
+    stagePadding: 5,
+    autoplayHoverPause: true,
+    transitionStyle: true,
     smartSpeed: 1000,
     responsive:{
       0:{
